@@ -10,7 +10,7 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 
 const ProductCard = () => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card >
       <CardMedia
         component="img"
         alt="green iguana"

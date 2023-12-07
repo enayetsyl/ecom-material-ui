@@ -3,8 +3,9 @@ import hero1 from '../assets/hero1.webp'
 import hero2 from '../assets/hero2.webp'
 import hero3 from '../assets/hero3.webp'
 import { useEffect } from 'react';
-import { Box, Button, Container, Typography } from '@mui/material';
+import { Box, Button, Container, Typography, useMediaQuery } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { useTheme } from '@emotion/react';
 
 
 const Header = () => {
@@ -20,22 +21,22 @@ const Header = () => {
     return () => clearInterval(interval); 
   }, [images.length]);
 
-  // HEADING TYPOGRAPHY VARIANT
-  const screen = window.innerWidth;
+  const theme = useTheme();
 
-  let heading;
-  if(screen > 1024){
-    heading = 'h1'
-  }
-  else if(screen <= 1024 && screen > 768){
-    heading = 'h2';
-  } else if (screen <= 768 && screen > 425){
-    heading = 'h3'
-  } else {
-    heading = 'h3'
-  }
+  const xs = useMediaQuery(theme.breakpoints.down('xs'));
+const sm = useMediaQuery(theme.breakpoints.down('sm'));
+const md = useMediaQuery(theme.breakpoints.down('md'));
+const lg = useMediaQuery(theme.breakpoints.down('lg'));
+
+const variant =
+  xs ? 'h4' :
+  sm ? 'h4' :
+  md ? 'h3' :
+  lg ? 'h2' :
+  'h2';
 
 
+  
   return (
     <Container
     maxWidth="xl"
@@ -43,14 +44,14 @@ const Header = () => {
     >
       <Box 
     mt={10}
-    py={5}
-      className="px-5 md:h-[95vh] lg:h-[90vh]   flex flex-col-reverse md:flex-row justify-center items-center gap-2"
+      className="px-5  md:h-[95vh] lg:h-[90vh] lg:pt-10  flex flex-col-reverse md:flex-row justify-center items-center gap-2"
         >
       {/* TEXT DIV */}
       <Box className="md:w-1/2 lg:w-3/5 space-y-8 md:space-y-4 py-12">
         <Typography 
-        variant={heading}
-        className="text-4xl md:text-5xl lg:text-7xl font-bold capitalize ">new style unique design</Typography>
+        variant={variant}
+        className="font-bold capitalize"
+        >new style unique design</Typography>
         <p className=" md:text-base lg:text-xl pb-5 lg:pb-2 xl:pb-5">In our shop you get unique designs that you will not get anywhere else. Our experienced designer wil give you world class cloth. Our delivery team will make sure you receive your product in a very short time. </p>
         <Link to='/shop'>
         <Button 

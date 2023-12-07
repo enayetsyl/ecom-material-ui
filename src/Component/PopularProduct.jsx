@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, useMediaQuery } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ProductCard from "./ProductCard";
@@ -12,21 +12,23 @@ import {
 // import Swiper styles
 import "swiper/css";
 import { useState } from "react";
+import { useTheme } from "@emotion/react";
 
 const PopularProduct = () => {
-  // HEADING TYPOGRAPHY VARIANT
-  const screen = window.innerWidth;
+ // HEADING TYPOGRAPHY VARIANT
+ const theme = useTheme();
 
-  let heading;
-  if (screen > 1024) {
-    heading = "h1";
-  } else if (screen <= 1024 && screen > 768) {
-    heading = "h2";
-  } else if (screen <= 768 && screen > 425) {
-    heading = "h2";
-  } else {
-    heading = "h3";
-  }
+ const xs = useMediaQuery(theme.breakpoints.down('xs'));
+const sm = useMediaQuery(theme.breakpoints.down('sm'));
+const md = useMediaQuery(theme.breakpoints.down('md'));
+const lg = useMediaQuery(theme.breakpoints.down('lg'));
+
+const variant =
+ xs ? 'h4' :
+ sm ? 'h4' :
+ md ? 'h3' :
+ lg ? 'h2' :
+ 'h2';
 
   //  ICON BOLD STYLE
   const boldIconStyle = {
@@ -63,13 +65,13 @@ const PopularProduct = () => {
     <Container 
     maxWidth="xl"
     >
-      <Box className="mt-20 min-h-screen">
+      <Box className="my-20 min-h-screen">
       {/* box for typography */}
       <Box>
         <Typography variant="h6" align="center" className="pb-3">
           Popular Products
         </Typography>
-        <Typography variant={heading} align="center" className="font-black">
+        <Typography variant={variant} align="center" className="font-black">
           Trending Now
         </Typography>
       </Box>
