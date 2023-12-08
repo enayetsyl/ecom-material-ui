@@ -12,6 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import logo from '../assets/logo.webp'
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import { Link } from 'react-router-dom';
 
 
 const pages = ['Home', 'Shop', 'Blog', 'Contact Us'];
@@ -72,7 +73,11 @@ const Navbar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                 <Link
+                 to={page === 'Home' ? '/' : `/${page.toLowerCase()}`}
+                 >
+                 <Typography textAlign="center">{page}</Typography>
+                 </Link>
                 </MenuItem>
               ))}
             </Menu>

@@ -1,0 +1,434 @@
+[
+  {
+    "productTitle": "Smartphone X",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 499.99,
+    "currentPrice": 449.99
+  },
+  {
+    "productTitle": "Laptop Pro",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 1299.99,
+    "currentPrice": 1199.99
+  },
+  {
+    "productTitle": "Wireless Headphones",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 89.99,
+    "currentPrice": 69.99
+  },
+  {
+    "productTitle": "Smart Watch",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 199.99,
+    "currentPrice": 179.99
+  },
+  {
+    "productTitle": "4K UHD TV",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 799.99,
+    "currentPrice": 699.99
+  },
+  {
+    "productTitle": "Gaming Console",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 349.99,
+    "currentPrice": 299.99
+  },
+  {
+    "productTitle": "Camera Kit",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 599.99,
+    "currentPrice": 549.99
+  },
+  {
+    "productTitle": "Fitness Tracker",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 79.99,
+    "currentPrice": 59.99
+  },
+  {
+    "productTitle": "Home Security System",
+    "image": "https://i.ibb.co/Hp0bwb-X/17.webp",
+    "regularPrice": 299.99,
+    "currentPrice": 249.99
+  },
+  {
+    "productTitle": "Wireless Router",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 129.99,
+    "currentPrice": 109.99
+  },
+  {
+    "productTitle": "Coffee Maker",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 49.99,
+    "currentPrice": 39.99
+  },
+  {
+    "productTitle": "External Hard Drive",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 89.99,
+    "currentPrice": 79.99
+  },
+  {
+    "productTitle": "Smartphone X",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 499.99,
+    "currentPrice": 449.99
+  },
+  {
+    "productTitle": "Laptop Pro",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 1299.99,
+    "currentPrice": 1199.99
+  },
+  {
+    "productTitle": "Wireless Headphones",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 89.99,
+    "currentPrice": 69.99
+  },
+  {
+    "productTitle": "Smart Watch",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 199.99,
+    "currentPrice": 179.99
+  },
+  {
+    "productTitle": "4K UHD TV",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 799.99,
+    "currentPrice": 699.99
+  },
+  {
+    "productTitle": "Gaming Console",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 349.99,
+    "currentPrice": 299.99
+  },
+  {
+    "productTitle": "Camera Kit",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 599.99,
+    "currentPrice": 549.99
+  },
+  {
+    "productTitle": "Fitness Tracker",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 79.99,
+    "currentPrice": 59.99
+  },
+  {
+    "productTitle": "Home Security System",
+    "image": "https://i.ibb.co/Hp0bwb-X/17.webp",
+    "regularPrice": 299.99,
+    "currentPrice": 249.99
+  },
+  {
+    "productTitle": "Wireless Router",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 129.99,
+    "currentPrice": 109.99
+  },
+  {
+    "productTitle": "Coffee Maker",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 49.99,
+    "currentPrice": 39.99
+  },
+  {
+    "productTitle": "External Hard Drive",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 89.99,
+    "currentPrice": 79.99
+  },
+  {
+    "productTitle": "Smartphone X",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 499.99,
+    "currentPrice": 449.99
+  },
+  {
+    "productTitle": "Laptop Pro",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 1299.99,
+    "currentPrice": 1199.99
+  },
+  {
+    "productTitle": "Wireless Headphones",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 89.99,
+    "currentPrice": 69.99
+  },
+  {
+    "productTitle": "Smart Watch",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 199.99,
+    "currentPrice": 179.99
+  },
+  {
+    "productTitle": "4K UHD TV",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 799.99,
+    "currentPrice": 699.99
+  },
+  {
+    "productTitle": "Gaming Console",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 349.99,
+    "currentPrice": 299.99
+  },
+  {
+    "productTitle": "Camera Kit",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 599.99,
+    "currentPrice": 549.99
+  },
+  {
+    "productTitle": "Fitness Tracker",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 79.99,
+    "currentPrice": 59.99
+  },
+  {
+    "productTitle": "Home Security System",
+    "image": "https://i.ibb.co/Hp0bwb-X/17.webp",
+    "regularPrice": 299.99,
+    "currentPrice": 249.99
+  },
+  {
+    "productTitle": "Wireless Router",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 129.99,
+    "currentPrice": 109.99
+  },
+  {
+    "productTitle": "Coffee Maker",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 49.99,
+    "currentPrice": 39.99
+  },
+  {
+    "productTitle": "External Hard Drive",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 89.99,
+    "currentPrice": 79.99
+  },
+  {
+    "productTitle": "Smartphone X",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 499.99,
+    "currentPrice": 449.99
+  },
+  {
+    "productTitle": "Laptop Pro",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 1299.99,
+    "currentPrice": 1199.99
+  },
+  {
+    "productTitle": "Wireless Headphones",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 89.99,
+    "currentPrice": 69.99
+  },
+  {
+    "productTitle": "Smart Watch",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 199.99,
+    "currentPrice": 179.99
+  },
+  {
+    "productTitle": "4K UHD TV",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 799.99,
+    "currentPrice": 699.99
+  },
+  {
+    "productTitle": "Gaming Console",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 349.99,
+    "currentPrice": 299.99
+  },
+  {
+    "productTitle": "Camera Kit",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 599.99,
+    "currentPrice": 549.99
+  },
+  {
+    "productTitle": "Fitness Tracker",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 79.99,
+    "currentPrice": 59.99
+  },
+  {
+    "productTitle": "Home Security System",
+    "image": "https://i.ibb.co/Hp0bwb-X/17.webp",
+    "regularPrice": 299.99,
+    "currentPrice": 249.99
+  },
+  {
+    "productTitle": "Wireless Router",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 129.99,
+    "currentPrice": 109.99
+  },
+  {
+    "productTitle": "Coffee Maker",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 49.99,
+    "currentPrice": 39.99
+  },
+  {
+    "productTitle": "External Hard Drive",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 89.99,
+    "currentPrice": 79.99
+  },
+  {
+    "productTitle": "Smartphone X",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 499.99,
+    "currentPrice": 449.99
+  },
+  {
+    "productTitle": "Laptop Pro",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 1299.99,
+    "currentPrice": 1199.99
+  },
+  {
+    "productTitle": "Wireless Headphones",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 89.99,
+    "currentPrice": 69.99
+  },
+  {
+    "productTitle": "Smart Watch",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 199.99,
+    "currentPrice": 179.99
+  },
+  {
+    "productTitle": "4K UHD TV",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 799.99,
+    "currentPrice": 699.99
+  },
+  {
+    "productTitle": "Gaming Console",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 349.99,
+    "currentPrice": 299.99
+  },
+  {
+    "productTitle": "Camera Kit",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 599.99,
+    "currentPrice": 549.99
+  },
+  {
+    "productTitle": "Fitness Tracker",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 79.99,
+    "currentPrice": 59.99
+  },
+  {
+    "productTitle": "Home Security System",
+    "image": "https://i.ibb.co/Hp0bwb-X/17.webp",
+    "regularPrice": 299.99,
+    "currentPrice": 249.99
+  },
+  {
+    "productTitle": "Wireless Router",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 129.99,
+    "currentPrice": 109.99
+  },
+  {
+    "productTitle": "Coffee Maker",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 49.99,
+    "currentPrice": 39.99
+  },
+  {
+    "productTitle": "External Hard Drive",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 89.99,
+    "currentPrice": 79.99
+  },
+  {
+    "productTitle": "Smartphone X",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 499.99,
+    "currentPrice": 449.99
+  },
+  {
+    "productTitle": "Laptop Pro",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 1299.99,
+    "currentPrice": 1199.99
+  },
+  {
+    "productTitle": "Wireless Headphones",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 89.99,
+    "currentPrice": 69.99
+  },
+  {
+    "productTitle": "Smart Watch",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 199.99,
+    "currentPrice": 179.99
+  },
+  {
+    "productTitle": "4K UHD TV",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 799.99,
+    "currentPrice": 699.99
+  },
+  {
+    "productTitle": "Gaming Console",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 349.99,
+    "currentPrice": 299.99
+  },
+  {
+    "productTitle": "Camera Kit",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 599.99,
+    "currentPrice": 549.99
+  },
+  {
+    "productTitle": "Fitness Tracker",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 79.99,
+    "currentPrice": 59.99
+  },
+  {
+    "productTitle": "Home Security System",
+    "image": "https://i.ibb.co/Hp0bwb-X/17.webp",
+    "regularPrice": 299.99,
+    "currentPrice": 249.99
+  },
+  {
+    "productTitle": "Wireless Router",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 129.99,
+    "currentPrice": 109.99
+  },
+  {
+    "productTitle": "Coffee Maker",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 49.99,
+    "currentPrice": 39.99
+  },
+  {
+    "productTitle": "External Hard Drive",
+    "image": "https://i.ibb.co/Hp0bwbX/17.webp",
+    "regularPrice": 89.99,
+    "currentPrice": 79.99
+  }
+]
