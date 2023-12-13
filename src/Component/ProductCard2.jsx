@@ -4,11 +4,14 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import product1 from "../assets/product1.webp";
 import { Box, IconButton } from "@mui/material";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import { Link, useParams } from "react-router-dom";
 
 const ProductCard2 = ({p}) => {
+  const { id } = useParams();
+  
+  // console.log(p)
   return (
     <Card >
       <CardMedia
@@ -85,9 +88,11 @@ const ProductCard2 = ({p}) => {
         justifyContent: 'center'
       }}
       >
+        <Link to={`/singleProduct/${p._id}`}>
         <Button size="large"
         variant="contained"
         >Select</Button>
+        </Link>
       </CardActions>
     </Card>
   );
