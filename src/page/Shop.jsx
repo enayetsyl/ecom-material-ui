@@ -1,9 +1,17 @@
 
 import { useTheme } from "@emotion/react";
-import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material";
-import axios from "axios";
-import { useEffect, useRef, useState } from "react";
-import ProductCard2 from "../Component/ProductCard2";
+import { Box, Container, Grid, Typography, useMediaQuery, Button, CardActionArea, CardActions } from "@mui/material";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import { useInfiniteQuery } from "@tanstack/react-query"
+import InfiniteScroll from "react-infinite-scroll-component"
+
+const getCards = async ({pageParam = 0}) => {
+  const res = await fetch(`http://localhost:5000/api/v1/allproducts?limit=9&offset=${pageParam}`)
+  const data = await res.json()
+  return { ...data, prevOffset: pageParam}
+}
 
 const Shop = () => {
   // TYPOGRAPHY VARIANT RESPONSIVENESS
@@ -21,45 +29,21 @@ const variant =
   lg ? 'h2' :
   'h2';
 
-  // DATA FETCHING
-    const [productData, setProductData] = useState([])
-    const [page, setPage] = useState(1)
-    const [loading, setLoading] = useState(true)
-  
-    const getProductData = async (page) => {
-      const url = `http://localhost:5000/api/v1/allproducts?_limit=9&_page=${page}`;
-      try {
-        const res = await fetch(url);
-    
-        const data = await res.json();
-        setProductData((prev) => [...prev, ...data]);
-        setLoading(false)
-      } catch (error) {
-        console.error("Error fetching product data:", error);
+  const {data, fetchNextPage, hasNextPage} = useInfiniteQuery({
+    queryKey: ['card'],
+    queryFn: getCards,
+    getNextPageParam: (lastPage) => {
+      if(lastPage.prevOffset + 9 > lastPage.productCount) {
+        return false;
       }
-    };
-  
-    const handleInfiniteScroll = async () => {
-      try{
-        if (window.innerHeight + document.documentElement.scrollTop + 1 >= document.documentElement.scrollHeight){
-          setLoading(true)
-          setPage((prev) => prev + 1)
-        }
-      } catch(error){
-        console.log(error)
-      }
+      return lastPage.prevOffset + 1
     }
-  
-    useEffect(() => {
-      getProductData(page)
-    },[page])
-  
-    useEffect(() => {
-      window.addEventListener('scroll', handleInfiniteScroll)
-      return() => window.removeEventListener('scroll', handleInfiniteScroll)
+  })
+
+    const products = data?.pages.reduce((acc,page) => {
+      return [...acc, ...page.products]
     },[])
- 
-  // console.log(product)
+
 
   return (
     <Container maxWidth='xl'>
@@ -72,93 +56,63 @@ const variant =
           Our Shop
         </Typography>
 
-        <Grid container spacing={3}
+       <InfiniteScroll
+       dataLength={products ? products.length : 0}
+       next={() => fetchNextPage()}
+       hasMore={hasNextPage}
+       loader={<h1 className="text-5xl">Loading...........</h1>}
+       endMessage={<p className="text-3xl font-bold">This is the end</p>}
+       >
+       <Grid container m={2} spacing={3} gap={2}
          >
-          <h1 className="fixed text-2xl text-red-500">Number of product: {productData.length}</h1>
-      {/* Item 1 */}
-      {
-        productData?.map((p, idx) => (
-          <Grid 
-          key={idx}
-          item xs={12} sm={6} md={4} lg={4}>
-               <ProductCard2 p={p}/>
+    {
+          products && products.map((product, index) => (
+           
+              <Card sx={{ maxWidth: 345 }}
+              key={index}
+              >
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="100"
+                image={product.image}
+                alt="Product image"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                 {product.productTitle}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lizards are a widespread group of squamate reptiles, with over 6,000
+                  species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                Share
+              </Button>
+            </CardActions>
+          </Card>
+      
+          //  <div key={index}
+          //  className="border border-solid border-red-500 space-y-6 flex flex-col justify-center items-center p-5"
+          //  >
+          //    <img src={product.image} alt="" />
+          //    <h1>{product.productTitle }</h1>
+          //   <p>{product.regularPrice}</p>
+          //  </div>
+          ))
+        }
+     
       </Grid>
-        ))
-      }
-      </Grid>
-     {loading && <p>Loading......</p>}
-     {/* {error && <p>Error: {error.message}</p>} */}
+       </InfiniteScroll>
+    
       </Box>
     </Container>
   );
 };
 
 export default Shop;
-
-
-
-
-// import axios from "axios";
-// import { useEffect, useState } from "react";
-
-// const Shop = () => {
-//   const [productData, setProductData] = useState([])
-//   const [page, setPage] = useState(1)
-//   const [loading, setLoading] = useState(true)
-
-//   const getProductData = async (page) => {
-//     const url = `https://material-ui-first-project-server.vercel.app/api/v1/allproducts?_limit=9&_page=${page}`;
-//     try {
-//       const res = await fetch(url);
-  
-//       const data = await res.json();
-//       setProductData((prev) => [...prev, ...data]);
-//       setLoading(false)
-//     } catch (error) {
-//       console.error("Error fetching product data:", error);
-//     }
-//   };
-
-//   const handleInfiniteScroll = async () => {
-//     try{
-//       if (window.innerHeight + document.documentElement.scrollTop + 1 >= document.documentElement.scrollHeight){
-//         setLoading(true)
-//         setPage((prev) => prev + 1)
-//       }
-//     } catch(error){
-//       console.log(error)
-//     }
-//   }
-
-//   useEffect(() => {
-//     getProductData()
-//   },[page])
-
-//   useEffect(() => {
-//     window.addEventListener('scroll', handleInfiniteScroll)
-//     return() => window.removeEventListener('scroll', handleInfiniteScroll)
-//   },[])
-
-//   return (
-//     <>
-//     <h1 className="fixed mt-20">Product {productData.length}</h1>
-//     <div className="grid grid-cols-3 gap-5">
-//       {
-//         productData?.map((product, idx) => (
-//           <div key={idx} className="space-y-3 p-5 border border-solid border-red-400">
-//             <img src={product.image} alt="" />            
-//             <h1>{product.productTitle}</h1>
-//             <p>{product.regularPrice}</p>
-//             <p>{product.currentPrice}</p>
-//           </div>
-//         ))
-//       }
-//     </div>
-//     {loading && <p>Loading............</p>}
-//     </>
-//   );
-// };
-
-// export default Shop;
 
 
