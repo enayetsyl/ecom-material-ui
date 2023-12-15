@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { useInfiniteQuery } from "@tanstack/react-query"
 import InfiniteScroll from "react-infinite-scroll-component"
+import { Link } from "react-router-dom";
 
 const getCards = async ({pageParam = 0}) => {
   const res = await fetch(`http://localhost:5000/api/v1/allproducts?limit=9&offset=${pageParam}`)
@@ -44,10 +45,12 @@ const variant =
       return [...acc, ...page.products]
     },[])
 
+    console.log(products)
 
   return (
     <Container maxWidth='xl'>
       <Box mt={15} >
+        {/* heading */}
         <Typography
         variant={variant}
         align="center"
@@ -55,7 +58,7 @@ const variant =
         >
           Our Shop
         </Typography>
-
+      {/* product with infinite scroll */}
        <InfiniteScroll
        dataLength={products ? products.length : 0}
        next={() => fetchNextPage()}
@@ -63,7 +66,7 @@ const variant =
        loader={<h1 className="text-5xl">Loading...........</h1>}
        endMessage={<p className="text-3xl font-bold">This is the end</p>}
        >
-       <Grid container m={1} spacing={1} gap={1}
+       <Grid display="grid" gridTemplateColumns="repeat(3, 1fr)" gap={2}
          >
     {
           products && products.map((product, index) => (
@@ -75,23 +78,38 @@ const variant =
               <CardMedia
                 component="img"
                 height="100"
-                image={product.image}
+                image={product.featured_image
+                }
                 alt="Product image"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                 {product.productTitle}
+                 {product.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over 6,000
-                  species, ranging across all continents except Antarctica
+                <Typography 
+                sx={{
+                  fontWeight:'bold'
+                }}
+                variant="body1" color="text.secondary">
+                  {product.desc}
+                </Typography>
+                <Typography variant="body1" color="text.secondary"
+                sx={{
+                  fontWeight:'bold'
+                }}
+                >
+                  Regular Price: {product.rprice}
                 </Typography>
               </CardContent>
             </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary">
-                Share
+            <CardActions
+          sx={{display: 'flex', alignContent:'center', justifyContent: 'center'}}
+>
+             <Link to={`/singleProduct/${product._id}`}>
+             <Button  variant="contained" size="small" color="primary">
+               Select
               </Button>
+             </Link>
             </CardActions>
           </Card>
       

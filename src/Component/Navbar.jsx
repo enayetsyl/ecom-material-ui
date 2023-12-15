@@ -74,7 +74,7 @@ const Navbar = () => {
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                  <Link
-                 to={page === 'Home' ? '/' : `/${page.toLowerCase()}`}
+                 to={page === 'Home' ? '/' : `/${page.replace(/\s+/g, '').toLowerCase()}`}
                  >
                  <Typography textAlign="center">{page}</Typography>
                  </Link>
@@ -110,9 +110,11 @@ const Navbar = () => {
           </Typography> */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-             <Link key={page}>
+             <Link key={page}
+             to={page === 'Home' ? '/' : `/${page.replace(/\s+/g, '').toLowerCase()}`}
+             >
               <Button
-                to={page === 'Home' ? '/' : `/${page.toLowerCase()}`}
+              
                 onClick={() => {handleCloseNavMenu();
                   setActivePage(page)                
                 }}
