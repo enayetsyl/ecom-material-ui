@@ -43,35 +43,35 @@ export  const router = createBrowserRouter([
     element:<Dashboard/>,
     children:[
       {
-        path:'/allproducts',
+        path:'allproducts',
         element:<AllProducts/>
       },
       {
-        path:'/addproduct',
+        path:'addproduct',
         element:<AddProduct/>
       },
       {
-        path:'/allorders',
+        path:'allorders',
         element:<AllOrders/>
       },
       {
-        path:'/onholdorder',
+        path:'onholdorder',
         element:<OnHoldOrder/>
       },
       {
-        path:'/processingorder',
+        path:'processingorder',
         element:<ProcessingOrder/>
       },
       {
-        path:'/completeorder',
+        path:'completeorder',
         element:<CompleteOrder/>
       },
       {
-        path:'/allblogs',
+        path:'allblogs',
         element:<AllBlogs/>
       },
       {
-        path:'/addblog',
+        path:'addblog',
         element:<AddBlog/>
       },
     ]
