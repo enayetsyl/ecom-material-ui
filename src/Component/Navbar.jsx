@@ -110,8 +110,9 @@ const Navbar = () => {
           </Typography> */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
+             <Link key={page}>
               <Button
-                key={page}
+                to={page === 'Home' ? '/' : `/${page.toLowerCase()}`}
                 onClick={() => {handleCloseNavMenu();
                   setActivePage(page)                
                 }}
@@ -125,6 +126,7 @@ const Navbar = () => {
               >
                 {page}
               </Button>
+             </Link>
             ))}
           </Box>
           <IconButton>

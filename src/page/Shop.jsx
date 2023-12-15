@@ -63,7 +63,7 @@ const variant =
        loader={<h1 className="text-5xl">Loading...........</h1>}
        endMessage={<p className="text-3xl font-bold">This is the end</p>}
        >
-       <Grid container m={2} spacing={3} gap={2}
+       <Grid container m={1} spacing={1} gap={1}
          >
     {
           products && products.map((product, index) => (
